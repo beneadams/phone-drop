@@ -1,0 +1,30 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none';script-src 'self';style-src 'unsafe-inline';connect-src https://api.github.com">
+<title>Send to 3D-Prints</title>
+<style>
+body{margin:0;font:16px/1.45 -apple-system,sans-serif;background:#f6f5f2;color:#1d1d1b}
+.w{max-width:540px;margin:auto;padding:24px 16px 60px}
+h1{font:600 26px Georgia,serif;margin:0 0 6px}
+.k,.s{color:#6b6a66;font-size:14px}
+.c{background:#fff;border:1px solid #e2e0db;border-radius:14px;padding:16px;margin:16px 0}
+input[type=text],input[type=password]{width:100%;box-sizing:border-box;font-size:16px;padding:12px;border:1px solid #ccc;border-radius:10px}
+button,.b{font:600 16px sans-serif;padding:11px 16px;border-radius:10px;border:1px solid #1d1d1b;background:#1d1d1b;color:#fff;text-decoration:none;display:inline-block;margin:6px 6px 0 0}
+.g{background:#fff;color:#1d1d1b}
+button:disabled{opacity:.4}
+ul{padding:0}
+li{list-style:none;border-top:1px solid #e2e0db;padding:10px 0}
+.n{font-weight:600;word-break:break-all}
+.m{font:13px ui-monospace,monospace;color:#6b6a66}
+.e{color:#b3261e}
+</style></head><body><div class="w">
+<h1>Send files to 3D-Prints</h1>
+<p class="k">Pick files on this phone. They go straight into a folder in your private 3D-Prints repo.</p>
+<details class="c" id="setup"><summary id="st">One-time setup: GitHub key</summary>
+<p class="s">No key is built into this page. The key you paste stays in this browser on this phone and is only sent to api.github.com.</p>
+<p class="s">1. <a href="https://github.com/settings/personal-access-tokens/new?name=3D-Prints+phone+upload&amp;target_name=beneadams&amp;expires_in=90&amp;contents=write" target="_blank" rel="noopener">Create the key on GitHub</a>. Under Repository access choose Only select repositories, then 3D-Prints. Contents is already Read and write. Tap Generate token and copy it.</p>
+<p class="s">2. Paste it here:</p><input id="tk" type="password" autocomplete="off" autocapitalize="off" placeholder="github_pat_...">
+<button id="sv">Check and save</button><button id="fg" class="g">Forget key</button><p class="s" id="ts"></p></details>
+<div class="c"><p class="s">Folder in 3D-Prints</p><input id="fo" type="text" value="Good Work" autocapitalize="off">
+<p><input id="fi" type="file" multiple></p><ul id="q"></ul><button id="go" disabled>Upload</button></div>
+<p class="s">Each file is its own commit on main. If the name is already taken, the date and time are added so nothing is overwritten.</p></div>
+<script src="app.js"></script></body></html>
